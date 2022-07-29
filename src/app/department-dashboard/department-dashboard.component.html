@@ -1,0 +1,58 @@
+<!-- .<div class="outer">
+
+    <div class="container">
+
+      <div  id="navbarSupportedContent">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Department</button>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Department Id</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let department of depList">
+            <td>{{department.DepartmentId}}</td>
+            <td>{{department.DepartmentName}}</td>
+
+            <td>
+
+                <button type="button" class="btn btn-outline-danger" (click)="deleteDepartment(department)">Delete</button>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+       // Add employee modal
+       <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add new Department</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form [formGroup]="depDetail">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Department Name</label>
+                      <input type="text" formControlName="DepartmentName" class="form-control" id="DepartmentName" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)= "addDepartment()" >Add Department</button>
+                      </div>
+                  </form>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div> -->

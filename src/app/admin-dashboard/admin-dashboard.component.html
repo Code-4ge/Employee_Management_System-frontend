@@ -1,0 +1,25 @@
+<h2>Welcome to Admin Dashboard</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Email ID</th>
+              <th>Contact</th>
+              <th>Date of Joining</th>
+              <th>Department</th>
+              <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of E_details">
+              <td>{{employee.name}}</td>
+              <td>{{employee.email}}</td>
+              <td>{{employee.contact}}</td>
+              <td>{{employee.joiningdate}}</td>
+              <td>{{employee.department}}</td>
+              <td><button id="del_btn" (click)="deleteEmployee(employee.id)">Delete</button></td>
+          </tr>
+        <tbody>
+    </table>
+</div>

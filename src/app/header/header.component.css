@@ -1,0 +1,25 @@
+nav{
+  height: 100%;
+}
+.side-nav-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.side-nav-button:hover{
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 30%;
+
+}
+.Footer{
+  position: fixed;
+  bottom: -3%;
+  background-color: #03045E;
+  text-align: center;
+  padding: 100px 0px -1px;
+  width: 100%;
+  color: white;
+}
+

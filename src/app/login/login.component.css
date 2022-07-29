@@ -1,0 +1,25 @@
+.card{
+  margin-top: 15px;
+  border: 1px solid blue;
+  width: 550px;
+  padding: 45px;
+  position: absolute;
+  top: 273%;
+  left: 800%;
+  /* transform: translate(-50%,-50%); */
+  background: #0077B6;
+
+}
+
+.card h1,h6{
+  color: #fff;
+}
+
+label{
+  color: #fff;
+}
+
+.emailHelp{
+  color: black ;
+}
+

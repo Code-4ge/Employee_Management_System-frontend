@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand navbar-dark px-2" style="background: #03045E">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="SideNavToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <a class="navbar-brand px-4" href="#">Employee Management System</a>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white"href="#" role="button"
+              data-bs-toggle="dropdown">Menu</a>
+
+              <ul class="dropdown-menu dropdown-menu-dark" style="background: #03045E;">
+                  <li><a class="dropdown-item text-white" routerLink="login">Employee Login</a></li>
+                  <li><a class="dropdown-item text-white" routerLink="alogin">Admin Login</a></li>
+              </ul>
+
+          </li>
+        </ul>
+        <button *ngIf="show_btn" (click)="Logout()">Logout</button>
+      </div>
+      <footer class="Footer">
+        <div class="text-center p-4" >
+          © 2021 Copyright:
+          <a class="text-reset fw-bold" routerLink="/home">TeamD.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+</nav>

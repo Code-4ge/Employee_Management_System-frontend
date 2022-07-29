@@ -1,0 +1,127 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+            <h1>Employee Details</h1>
+            <!-- <h5>Feel Free to Login</h5> -->
+            <form [formGroup]="employeeForm" (ngSubmit)="Insert()">
+              <!-- FIRST AND LAST NAME -->
+          <div class="row mt-4">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name" formControlName="name" required>
+            </div>
+            <!-- <div class="col">
+              <input required type="text" class="form-control" placeholder="Last Name" formControlName="lastname">
+            </div> -->
+          </div>
+
+          <!-- PERSONAL INFORMATION -->
+          <div class="row mt-5">
+            <div class="col form-heading">
+              <h6>Personal Information</h6>
+            </div>
+          </div>
+
+
+          <div class="row mt-4">
+            <div class="col">
+              <label for="datepicker" class="form-label">Birthdate</label>
+              <input required type="date" class="form-control" id="datepicker" formControlName="birthdate">
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+            </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+                <label for="datepicker" class="form-label">ContactNumber</label>
+                <input required type="text" name="quantity" min="1" max="12" class="form-control" formControlName="contact">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="row mt-4">
+                <h6>Gender</h6>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-check-inline">
+                    <input required class="form-check-input" type="radio" name="gender" id="male" value="m"
+                      formControlName="gender">
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input required class="form-check-input" type="radio" name="gender" id="female" value="f"
+                      formControlName="gender">
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <select class="form-select" formControlName="education" aria-placeholder="Education">
+                <option value="default" selected>Select your Education</option>
+                <option *ngFor="let option of educationOptions; let i = index" value="{{option}}">
+                  <!-- {{option | titlecase}} -->
+                  {{option | titlecase}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <label for="profile" class="form-label">Profile Image</label>
+              <input required type="file" class="form-control" id="profile" formControlName="profile">
+            </div>
+          </div>
+
+          <!-- JOB INFORMATION -->
+          <div class="row mt-5">
+            <div class="col form-heading">
+              <h6>Job Information</h6>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input required type="text" class="form-control" placeholder="Department Name" formControlName="department">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="joindate" class="form-label">Joining Date</label>
+              <input required type="date" class="form-control" id="joindate" formControlName="joiningdate">
+            </div>
+            </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <input required type="number" class="form-control" placeholder="Job Experience (yrs)"
+                formControlName="jobExperience">
+            </div>
+            <div class="col">
+              <input required type="number" class="form-control" placeholder="Salary (LPA)" formControlName="salary">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

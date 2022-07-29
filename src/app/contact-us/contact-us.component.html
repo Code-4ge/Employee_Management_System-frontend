@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+</head>
+<body>
+	<!-- <header>
+		<nav>
+			<h1>Employee Management System</h1>
+			<ul id="navli">
+				<li><a class="homeblack" href="index.html">HOME</a></li>
+				<li><a class="homeblack" href="elogin.html">Employee Login</a></li>
+				<li><a class="homered" href="alogin.html">Admin Login</a></li>
+
+			</ul>
+		</nav>
+	</header> -->
+	<div class="divider"></div>
+
+	<div class="contact">
+        <!-- <h1>Contact Us</h1> -->
+        <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+          <h3>GET IN TOUCH</h3>
+          <input type="text" id="name" placeholder="Your Name" formControlName="name" required>
+          <input type="email" id="email" placeholder="Email ID"formControlName="email" required>
+          <input type="text" id="phone" placeholder="Phone No."formControlName="phone" required>
+          <textarea id="message" rows="4" placeholder="How We Can Help You"formControlName="body"></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
